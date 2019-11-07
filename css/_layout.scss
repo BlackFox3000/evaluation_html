@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Bernina";
+  src: url("../fonts/BerninaSans-Web-CondensedBold.woff2") format("woff2");
+}
+
 .inner {
   width: 100%;
 }
@@ -9,8 +14,8 @@ body {
 header {
 
   #background {
-    width: 248%;
-    margin-left: -75%;
+        width: 248%;
+        margin-left: -75%;
   }
 
   .promo {
@@ -37,9 +42,9 @@ header {
     color: #f7ffff;
     width: 100%;
     display: flex;
-    justify-content: end;
     flex-direction: column;
     margin-top: 132%;
+
 
     #text_white_big, #text_white_small {
       margin-left: 3%;
@@ -56,6 +61,7 @@ header {
 }
 
 .text {
+  font-family: Bernina;
   font-weight: bold;
   color: #00465b;
   text-align: center;
@@ -67,6 +73,11 @@ header {
     margin-left: 12px;
     margin-right: 12px;
   }
+}
+
+.head{
+  display: flex;
+  justify-content: space-between;
 }
 
 .marque{
@@ -86,14 +97,37 @@ header {
     border-radius: 50%;
   }
 }
-@media screen and (max-width: 466px) {
+@media screen and (min-width: 466px) {
 
-}
+  header {
+
+    #background {
+      width: 100%;
+      margin-left:0%
+    }
 
 
-@media screen and (max-width: 668px) {
-  .menu {
-    display: flex;
-    flex-direction: row;
+    .bandeau {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.25);
+      color: #f7ffff;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-top: 132%;
+
+
+      #text_white_big, #text_white_small {
+        margin-left: 3%;
+        font-size: 50%;
+
+      }
+
+      #text_white_big {
+        font-weight: bold;
+      }
+
+
+    }
   }
 }
