@@ -1,3 +1,4 @@
+$color-text: #00465b;
 @font-face {
   font-family: "Bernina";
   src: url("../fonts/BerninaSans-Web-CondensedBold.woff2") format("woff2");
@@ -20,7 +21,8 @@ header {
     background-position: center;
     background-size: cover;
     height: auto;
-    min-height: 500px;
+    min-height: 1000px;
+    background-position: top;
 
 
     .promo {
@@ -31,48 +33,52 @@ header {
       text-align: center;
       width: 70%;
       transform: rotate(23deg);
-      margin-top: 20%;
       margin-left: 24%;
+      top: 5%;
+      width: 11em;
+      right: 5%;
+      font-size: 2em;
+      margin-top: 1em;
 
       #text_promo_white_big {
         font-weight: bold;
+        font-size: larger;
+      }
+      #text_promo_white_small{
+        font-size: small;
       }
 
     }
 
     .bandeau {
-      position: absolute;
       background-color: rgba(255, 255, 255, 0.25);
       color: #f7ffff;
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      margin-top: 132%;
-
+      position: absolute;
+      margin-top: 880px;
+      font-size: 2em;
 
       #text_white_big, #text_white_small {
         margin-left: 3%;
         font-size: 50%;
-
       }
-
       #text_white_big {
         font-weight: bold;
       }
-
-
     }
   }
 }
 
+#titre {
+  font-size: 2em;
+  margin: 20px;
+  color:$color-text;
+}
 .text {
   font-weight: bold;
-  color: #00465b;
   text-align: center;
+  color:$color-text;
 
-  #titre {
-    font-size: 1.9rem;
-  }
   #paragraphe{
     margin-left: 12px;
     margin-right: 12px;
@@ -82,11 +88,23 @@ header {
 .head{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 1em;
+
+  #rdv{
+    border: 1px $color-text solid;
+    background-color: #f7ffff;
+    border-radius: 10px;
+    color:$color-text;
+    height: fit-content;
+    font-size: 35px;
+  }
 }
 
-.marque{
-  color: #00465b;
+#marque{
+  text-align: unset;
   font-size: 76%;
+  margin-left: 1%;
 }
 
 .menu{
@@ -96,44 +114,21 @@ header {
   p{
     display: flex;
     justify-content: center;
+    color:$color-text;
   }
   img{
     border-radius: 50%;
   }
 }
+
+
+
 @media screen and (min-width: 466px) {
 
-  header {
-
-    #background {
-      width: 100%;
-      margin-left:0%
-    }
-
-
-    .bandeau {
-      position: absolute;
-      background-color: rgba(255, 255, 255, 0.25);
-      color: #f7ffff;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      margin-top: 132%;
-
-
-      #text_white_big, #text_white_small {
-        margin-left: 3%;
-        font-size: 50%;
-
-      }
-
-      #text_white_big {
-        font-weight: bold;
-      }
-
-
-    }
-  }
+.inner{
+  max-width: 800px;
+  margin: auto;
+}
 
   ul{
     display: flex;
@@ -142,6 +137,28 @@ header {
     justify-content: center;
     &>li{
       width: 50%;
+      padding: 3%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 668px) {
+
+  .inner{
+    max-width: 800px;
+    margin: auto;
+  }
+
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    &>li{
+      width: 30%;
       padding: 3%;
       img{
         width: 100%;

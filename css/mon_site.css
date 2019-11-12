@@ -354,7 +354,8 @@ header .background {
   background-position: center;
   background-size: cover;
   height: auto;
-  min-height: 500px;
+  min-height: 1000px;
+  background-position: top;
 }
 
 header .background .promo {
@@ -366,24 +367,30 @@ header .background .promo {
   width: 70%;
   -webkit-transform: rotate(23deg);
           transform: rotate(23deg);
-  margin-top: 20%;
   margin-left: 24%;
+  top: 5%;
+  width: 11em;
+  right: 5%;
+  font-size: 2em;
+  margin-top: 1em;
 }
 
 header .background .promo #text_promo_white_big {
   font-weight: bold;
+  font-size: larger;
+}
+
+header .background .promo #text_promo_white_small {
+  font-size: small;
 }
 
 header .background .bandeau {
-  position: absolute;
   background-color: rgba(255, 255, 255, 0.25);
   color: #f7ffff;
   width: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  margin-top: 132%;
+  position: absolute;
+  margin-top: 880px;
+  font-size: 2em;
 }
 
 header .background .bandeau #text_white_big, header .background .bandeau #text_white_small {
@@ -395,14 +402,16 @@ header .background .bandeau #text_white_big {
   font-weight: bold;
 }
 
-.text {
-  font-weight: bold;
+#titre {
+  font-size: 2em;
+  margin: 20px;
   color: #00465b;
-  text-align: center;
 }
 
-.text #titre {
-  font-size: 1.9rem;
+.text {
+  font-weight: bold;
+  text-align: center;
+  color: #00465b;
 }
 
 .text #paragraphe {
@@ -415,11 +424,26 @@ header .background .bandeau #text_white_big {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1em;
 }
 
-.marque {
+.head #rdv {
+  border: 1px #00465b solid;
+  background-color: #f7ffff;
+  border-radius: 10px;
   color: #00465b;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 35px;
+}
+
+#marque {
+  text-align: unset;
   font-size: 76%;
+  margin-left: 1%;
 }
 
 .menu {
@@ -438,6 +462,7 @@ header .background .bandeau #text_white_big {
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
+  color: #00465b;
 }
 
 .menu img {
@@ -445,27 +470,9 @@ header .background .bandeau #text_white_big {
 }
 
 @media screen and (min-width: 466px) {
-  header #background {
-    width: 100%;
-    margin-left: 0%;
-  }
-  header .bandeau {
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.25);
-    color: #f7ffff;
-    width: 100%;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    margin-top: 132%;
-  }
-  header .bandeau #text_white_big, header .bandeau #text_white_small {
-    margin-left: 3%;
-    font-size: 50%;
-  }
-  header .bandeau #text_white_big {
-    font-weight: bold;
+  .inner {
+    max-width: 800px;
+    margin: auto;
   }
   ul {
     display: -ms-flexbox;
@@ -478,6 +485,29 @@ header .background .bandeau #text_white_big {
   }
   ul > li {
     width: 50%;
+    padding: 3%;
+  }
+  ul > li img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 668px) {
+  .inner {
+    max-width: 800px;
+    margin: auto;
+  }
+  ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  ul > li {
+    width: 30%;
     padding: 3%;
   }
   ul > li img {
